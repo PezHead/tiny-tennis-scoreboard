@@ -111,6 +111,69 @@
 			path = "simulator-wrapper";
 			sourceTree = "<group>";
 		};
+		8D1CB9EF1DB2A29F0074603D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AA2091DB2984600FE9F68 /* ViewController.swift */,
+				8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */,
+				8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */,
+				8D4AA22F1DB29BDE00FE9F68 /* ScoreboardViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8D1CB9F01DB2A2B60074603D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AA2191DB29A8F00FE9F68 /* Champion.swift */,
+				8D4AA2271DB29B7F00FE9F68 /* Match.swift */,
+				8D4AA2231DB29B4800FE9F68 /* Game.swift */,
+				8D4AA22D1DB29BCD00FE9F68 /* Point.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8D1CB9F11DB2A2D30074603D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D1CB9EB1DB29F1D0074603D /* Main.storyboard */,
+				8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */,
+				8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8D1CB9F21DB2A3100074603D /* Chameleon */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AA2331DB29C6C00FE9F68 /* Chameleon.h */,
+				8D4AA2341DB29C6C00FE9F68 /* Chameleon.m */,
+			);
+			name = Chameleon;
+			path = "Tiny Tennis";
+			sourceTree = "<group>";
+		};
+		8D1CB9F31DB2A3440074603D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */,
+				8D4AA2211DB29B2500FE9F68 /* Config.swift */,
+				8D4AA23C1DB29DA100FE9F68 /* Announcer.swift */,
+				8D4AA2251DB29B6200FE9F68 /* Input.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		8D1CB9F41DB2A35C0074603D /* Other Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AA2321DB29C6B00FE9F68 /* Tiny Tennis-Bridging-Header.h */,
+				8D4AA2071DB2984600FE9F68 /* AppDelegate.swift */,
+				8D4AA2131DB2984600FE9F68 /* Info.plist */,
+			);
+			name = "Other Stuff";
+			sourceTree = "<group>";
+		};
 		8D4AA1FB1DB2984600FE9F68 = {
 			isa = PBXGroup;
 			children = (
@@ -131,28 +194,13 @@
 		8D4AA2061DB2984600FE9F68 /* Tiny Tennis */ = {
 			isa = PBXGroup;
 			children = (
-				8D4AA2071DB2984600FE9F68 /* AppDelegate.swift */,
-				8D4AA2091DB2984600FE9F68 /* ViewController.swift */,
-				8D1CB9EB1DB29F1D0074603D /* Main.storyboard */,
-				8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */,
-				8D1CB9ED1DB29FC50074603D /* Assets.xcassets */,
-				8D4AA2131DB2984600FE9F68 /* Info.plist */,
-				8D4AA2191DB29A8F00FE9F68 /* Champion.swift */,
-				8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */,
-				8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */,
-				8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */,
-				8D4AA2211DB29B2500FE9F68 /* Config.swift */,
-				8D4AA2231DB29B4800FE9F68 /* Game.swift */,
-				8D4AA2251DB29B6200FE9F68 /* Input.swift */,
-				8D4AA2271DB29B7F00FE9F68 /* Match.swift */,
-				8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */,
+				8D1CB9F01DB2A2B60074603D /* Models */,
+				8D1CB9EF1DB2A29F0074603D /* ViewControllers */,
+				8D1CB9F11DB2A2D30074603D /* Views */,
+				8D1CB9F31DB2A3440074603D /* Helpers */,
 				8D4AA22B1DB29BB700FE9F68 /* MatchViewModel.swift */,
-				8D4AA22D1DB29BCD00FE9F68 /* Point.swift */,
-				8D4AA22F1DB29BDE00FE9F68 /* ScoreboardViewController.swift */,
-				8D4AA2331DB29C6C00FE9F68 /* Chameleon.h */,
-				8D4AA2341DB29C6C00FE9F68 /* Chameleon.m */,
-				8D4AA2321DB29C6B00FE9F68 /* Tiny Tennis-Bridging-Header.h */,
-				8D4AA23C1DB29DA100FE9F68 /* Announcer.swift */,
+				8D1CB9ED1DB29FC50074603D /* Assets.xcassets */,
+				8D1CB9F41DB2A35C0074603D /* Other Stuff */,
 			);
 			path = "Tiny Tennis";
 			sourceTree = "<group>";
@@ -160,6 +208,7 @@
 		8D4AA2361DB29CB000FE9F68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D1CB9F21DB2A3100074603D /* Chameleon */,
 				8D1CB9DE1DB29ED90074603D /* Flic */,
 			);
 			name = Frameworks;
