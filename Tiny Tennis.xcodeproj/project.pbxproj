@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D1CB9E71DB29ED90074603D /* SCLFlicButtonSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CB9E31DB29ED90074603D /* SCLFlicButtonSimulator.m */; };
+		8D1CB9E81DB29ED90074603D /* SCLFlicManagerSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CB9E51DB29ED90074603D /* SCLFlicManagerSimulator.m */; };
+		8D1CB9E91DB29EE00074603D /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CB9DF1DB29ED90074603D /* fliclib.framework */; };
+		8D1CB9EA1DB29EE00074603D /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CB9DF1DB29ED90074603D /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D1CB9EC1DB29F1D0074603D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1CB9EB1DB29F1D0074603D /* Main.storyboard */; };
+		8D1CB9EE1DB29FC50074603D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1CB9ED1DB29FC50074603D /* Assets.xcassets */; };
+		8D4AA2081DB2984600FE9F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2071DB2984600FE9F68 /* AppDelegate.swift */; };
+		8D4AA20A1DB2984600FE9F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2091DB2984600FE9F68 /* ViewController.swift */; };
+		8D4AA2121DB2984600FE9F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */; };
+		8D4AA21A1DB29A8F00FE9F68 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2191DB29A8F00FE9F68 /* Champion.swift */; };
+		8D4AA21C1DB29AD200FE9F68 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */; };
+		8D4AA21E1DB29AE900FE9F68 /* ChampionChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */; };
+		8D4AA2201DB29B0000FE9F68 /* ChampionsTome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */; };
+		8D4AA2221DB29B2500FE9F68 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2211DB29B2500FE9F68 /* Config.swift */; };
+		8D4AA2241DB29B4800FE9F68 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2231DB29B4800FE9F68 /* Game.swift */; };
+		8D4AA2261DB29B6200FE9F68 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2251DB29B6200FE9F68 /* Input.swift */; };
+		8D4AA2281DB29B7F00FE9F68 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2271DB29B7F00FE9F68 /* Match.swift */; };
+		8D4AA22A1DB29B9600FE9F68 /* MatchVictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */; };
+		8D4AA22C1DB29BB700FE9F68 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA22B1DB29BB700FE9F68 /* MatchViewModel.swift */; };
+		8D4AA22E1DB29BCD00FE9F68 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA22D1DB29BCD00FE9F68 /* Point.swift */; };
+		8D4AA2301DB29BDE00FE9F68 /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA22F1DB29BDE00FE9F68 /* ScoreboardViewController.swift */; };
+		8D4AA2351DB29C6C00FE9F68 /* Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2341DB29C6C00FE9F68 /* Chameleon.m */; };
+		8D4AA23D1DB29DA100FE9F68 /* Announcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA23C1DB29DA100FE9F68 /* Announcer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8D4AA23B1DB29D3C00FE9F68 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D1CB9EA1DB29EE00074603D /* fliclib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8D1CB9DF1DB29ED90074603D /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = fliclib.framework; sourceTree = "<group>"; };
+		8D1CB9E11DB29ED90074603D /* fliclibWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fliclibWrapper.h; sourceTree = "<group>"; };
+		8D1CB9E21DB29ED90074603D /* SCLFlicButtonSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLFlicButtonSimulator.h; sourceTree = "<group>"; };
+		8D1CB9E31DB29ED90074603D /* SCLFlicButtonSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLFlicButtonSimulator.m; sourceTree = "<group>"; };
+		8D1CB9E41DB29ED90074603D /* SCLFlicManagerSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLFlicManagerSimulator.h; sourceTree = "<group>"; };
+		8D1CB9E51DB29ED90074603D /* SCLFlicManagerSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLFlicManagerSimulator.m; sourceTree = "<group>"; };
+		8D1CB9EB1DB29F1D0074603D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8D1CB9ED1DB29FC50074603D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D4AA2041DB2984600FE9F68 /* Tiny Tennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Tennis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D4AA2071DB2984600FE9F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D4AA2091DB2984600FE9F68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D4AA2111DB2984600FE9F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D4AA2131DB2984600FE9F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4AA2191DB29A8F00FE9F68 /* Champion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
+		8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionChooserViewController.swift; sourceTree = "<group>"; };
+		8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionsTome.swift; sourceTree = "<group>"; };
+		8D4AA2211DB29B2500FE9F68 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		8D4AA2231DB29B4800FE9F68 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8D4AA2251DB29B6200FE9F68 /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		8D4AA2271DB29B7F00FE9F68 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchVictoryViewController.swift; sourceTree = "<group>"; };
+		8D4AA22B1DB29BB700FE9F68 /* MatchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+		8D4AA22D1DB29BCD00FE9F68 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		8D4AA22F1DB29BDE00FE9F68 /* ScoreboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
+		8D4AA2321DB29C6B00FE9F68 /* Tiny Tennis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tiny Tennis-Bridging-Header.h"; sourceTree = "<group>"; };
+		8D4AA2331DB29C6C00FE9F68 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
+		8D4AA2341DB29C6C00FE9F68 /* Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chameleon.m; sourceTree = "<group>"; };
+		8D4AA23C1DB29DA100FE9F68 /* Announcer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D4AA2011DB2984600FE9F68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1CB9E91DB29EE00074603D /* fliclib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D1CB9DE1DB29ED90074603D /* Flic */ = {
+			isa = PBXGroup;
+			children = (
+				8D1CB9DF1DB29ED90074603D /* fliclib.framework */,
+				8D1CB9E01DB29ED90074603D /* simulator-wrapper */,
+			);
+			path = Flic;
+			sourceTree = "<group>";
+		};
+		8D1CB9E01DB29ED90074603D /* simulator-wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				8D1CB9E11DB29ED90074603D /* fliclibWrapper.h */,
+				8D1CB9E21DB29ED90074603D /* SCLFlicButtonSimulator.h */,
+				8D1CB9E31DB29ED90074603D /* SCLFlicButtonSimulator.m */,
+				8D1CB9E41DB29ED90074603D /* SCLFlicManagerSimulator.h */,
+				8D1CB9E51DB29ED90074603D /* SCLFlicManagerSimulator.m */,
+			);
+			path = "simulator-wrapper";
+			sourceTree = "<group>";
+		};
+		8D4AA1FB1DB2984600FE9F68 = {
+			isa = PBXGroup;
+			children = (
+				8D4AA2061DB2984600FE9F68 /* Tiny Tennis */,
+				8D4AA2361DB29CB000FE9F68 /* Frameworks */,
+				8D4AA2051DB2984600FE9F68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D4AA2051DB2984600FE9F68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AA2041DB2984600FE9F68 /* Tiny Tennis.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D4AA2061DB2984600FE9F68 /* Tiny Tennis */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AA2071DB2984600FE9F68 /* AppDelegate.swift */,
+				8D4AA2091DB2984600FE9F68 /* ViewController.swift */,
+				8D1CB9EB1DB29F1D0074603D /* Main.storyboard */,
+				8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */,
+				8D1CB9ED1DB29FC50074603D /* Assets.xcassets */,
+				8D4AA2131DB2984600FE9F68 /* Info.plist */,
+				8D4AA2191DB29A8F00FE9F68 /* Champion.swift */,
+				8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */,
+				8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */,
+				8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */,
+				8D4AA2211DB29B2500FE9F68 /* Config.swift */,
+				8D4AA2231DB29B4800FE9F68 /* Game.swift */,
+				8D4AA2251DB29B6200FE9F68 /* Input.swift */,
+				8D4AA2271DB29B7F00FE9F68 /* Match.swift */,
+				8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */,
+				8D4AA22B1DB29BB700FE9F68 /* MatchViewModel.swift */,
+				8D4AA22D1DB29BCD00FE9F68 /* Point.swift */,
+				8D4AA22F1DB29BDE00FE9F68 /* ScoreboardViewController.swift */,
+				8D4AA2331DB29C6C00FE9F68 /* Chameleon.h */,
+				8D4AA2341DB29C6C00FE9F68 /* Chameleon.m */,
+				8D4AA2321DB29C6B00FE9F68 /* Tiny Tennis-Bridging-Header.h */,
+				8D4AA23C1DB29DA100FE9F68 /* Announcer.swift */,
+			);
+			path = "Tiny Tennis";
+			sourceTree = "<group>";
+		};
+		8D4AA2361DB29CB000FE9F68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D1CB9DE1DB29ED90074603D /* Flic */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D4AA2031DB2984600FE9F68 /* Tiny Tennis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D4AA2161DB2984600FE9F68 /* Build configuration list for PBXNativeTarget "Tiny Tennis" */;
+			buildPhases = (
+				8D4AA2001DB2984600FE9F68 /* Sources */,
+				8D4AA2011DB2984600FE9F68 /* Frameworks */,
+				8D4AA2021DB2984600FE9F68 /* Resources */,
+				8D4AA23B1DB29D3C00FE9F68 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tiny Tennis";
+			productName = "Tiny Tennis";
+			productReference = 8D4AA2041DB2984600FE9F68 /* Tiny Tennis.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D4AA1FC1DB2984600FE9F68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "David Bireta";
+				TargetAttributes = {
+					8D4AA2031DB2984600FE9F68 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4JS69C2584;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8D4AA1FF1DB2984600FE9F68 /* Build configuration list for PBXProject "Tiny Tennis" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D4AA1FB1DB2984600FE9F68;
+			productRefGroup = 8D4AA2051DB2984600FE9F68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D4AA2031DB2984600FE9F68 /* Tiny Tennis */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D4AA2021DB2984600FE9F68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1CB9EC1DB29F1D0074603D /* Main.storyboard in Resources */,
+				8D1CB9EE1DB29FC50074603D /* Assets.xcassets in Resources */,
+				8D4AA2121DB2984600FE9F68 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D4AA2001DB2984600FE9F68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D4AA2301DB29BDE00FE9F68 /* ScoreboardViewController.swift in Sources */,
+				8D4AA21C1DB29AD200FE9F68 /* ChampionCell.swift in Sources */,
+				8D4AA2201DB29B0000FE9F68 /* ChampionsTome.swift in Sources */,
+				8D4AA23D1DB29DA100FE9F68 /* Announcer.swift in Sources */,
+				8D4AA20A1DB2984600FE9F68 /* ViewController.swift in Sources */,
+				8D4AA2281DB29B7F00FE9F68 /* Match.swift in Sources */,
+				8D4AA22E1DB29BCD00FE9F68 /* Point.swift in Sources */,
+				8D4AA22C1DB29BB700FE9F68 /* MatchViewModel.swift in Sources */,
+				8D4AA2221DB29B2500FE9F68 /* Config.swift in Sources */,
+				8D4AA22A1DB29B9600FE9F68 /* MatchVictoryViewController.swift in Sources */,
+				8D4AA2351DB29C6C00FE9F68 /* Chameleon.m in Sources */,
+				8D4AA21E1DB29AE900FE9F68 /* ChampionChooserViewController.swift in Sources */,
+				8D4AA2081DB2984600FE9F68 /* AppDelegate.swift in Sources */,
+				8D1CB9E71DB29ED90074603D /* SCLFlicButtonSimulator.m in Sources */,
+				8D4AA2261DB29B6200FE9F68 /* Input.swift in Sources */,
+				8D1CB9E81DB29ED90074603D /* SCLFlicManagerSimulator.m in Sources */,
+				8D4AA21A1DB29A8F00FE9F68 /* Champion.swift in Sources */,
+				8D4AA2241DB29B4800FE9F68 /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D4AA2111DB2984600FE9F68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D4AA2141DB2984600FE9F68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D4AA2151DB2984600FE9F68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D4AA2171DB2984600FE9F68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4JS69C2584;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Flic",
+				);
+				INFOPLIST_FILE = "Tiny Tennis/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.finitefractal.Tiny-Tennis";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tiny Tennis/Tiny Tennis-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8D4AA2181DB2984600FE9F68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4JS69C2584;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Flic",
+				);
+				INFOPLIST_FILE = "Tiny Tennis/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.finitefractal.Tiny-Tennis";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tiny Tennis/Tiny Tennis-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D4AA1FF1DB2984600FE9F68 /* Build configuration list for PBXProject "Tiny Tennis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D4AA2141DB2984600FE9F68 /* Debug */,
+				8D4AA2151DB2984600FE9F68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D4AA2161DB2984600FE9F68 /* Build configuration list for PBXNativeTarget "Tiny Tennis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D4AA2171DB2984600FE9F68 /* Debug */,
+				8D4AA2181DB2984600FE9F68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D4AA1FC1DB2984600FE9F68 /* Project object */;
+}
