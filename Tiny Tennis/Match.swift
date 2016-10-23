@@ -345,6 +345,8 @@ private extension Match {
     }
     
     func postMatchStartToSlack() {
+        guard Config.slackToken != "<SLACK_TOKEN>" else { return }
+        
         let announcements = [
             "Grab your popcorn, a match is starting!",
             "Yo dawg, I heard you like to watch ping-pong",
@@ -385,6 +387,8 @@ private extension Match {
     }
     
     func updateGameScoreToSlack() {
+        guard Config.slackToken != "<SLACK_TOKEN>" else { return }
+        
         let redPlayers = redTeam.map{$0.name}.joined(separator: "/")
         let bluePlayers = blueTeam.map{$0.name}.joined(separator: "/")
         
@@ -423,6 +427,8 @@ private extension Match {
     }
     
     func sendToSlack(_ title: String, summary: String, footer: String) {
+        guard Config.slackToken != "<SLACK_TOKEN>" else { return }
+        
         let message = "username=Score Bot&icon_emoji=:pingpong:&channel=\(slack_channelID)&attachments=[{ 'color': '#219F46', 'title': '\(title)', 'text': '\(summary)', 'footer': '\(footer)', 'mrkdwn_in': ['text'] }]&token=\(Config.slackToken)&ts=\(slack_ts)"
         let messageData = message.data(using: .utf8)
         
