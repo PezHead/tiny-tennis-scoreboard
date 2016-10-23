@@ -14,7 +14,6 @@ import AVFoundation
 class Announcer {
     typealias Seconds = TimeInterval
     
-    
     static let shared = Announcer()
     public var isMuted = false
     
@@ -73,8 +72,7 @@ class Announcer {
         
         // Don't announce the final point of a game.
         if (servingScore >= 11 && servingScore - receivingScore >= 2) || (receivingScore >= 11 && receivingScore - servingScore >= 2) { return }
-        
-        
+    
         if game.redScore >= 10 && game.blueScore >= 10 {
             // Don't announce the score when in 'deuce mode'
             if game.redScore == game.blueScore {
@@ -109,4 +107,21 @@ class Announcer {
         
         say("\(winType)........ \(players)", withDelay: 0.5)
     }
+    
+    func announceMatchStart(_ match: Match) {
+        let redTeamNames = match.redTeam.map { $0.phoeneticName }.joined(separator: " and ")
+        let blueTeamNames = match.blueTeam.map { $0.phoeneticName }.joined(separator: " and ")
+        
+        let openingLines = [
+            "It's a brilliant afternoon for some tiny tennis! Today's matchup",
+            "Now stepping onto the court",
+            "This is the match-up we've all been waiting for.",
+            "Welcome to Center Court at media fly ..... We've got a smashing matchup this afternoon."
+        ]
+        
+        let random = Int(arc4random_uniform(UInt32(openingLines.count)))
+        let line = openingLines[random]
+        say("\(line); \(redTeamNames), versus \(blueTeamNames)")
+    }
 }
+
