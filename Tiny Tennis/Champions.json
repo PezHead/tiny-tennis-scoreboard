@@ -1,0 +1,23 @@
+[
+ {
+ "avatarUrl": "https://www.gravatar.com/avatar/41fed383905ce1db8422580c934e4b2d",
+ "fullName": "David Bireta",
+ "id": "d8842ac0-699a-4901-b3c5-41918075d432",
+ "nickname": "Bireta",
+ "phoneticNickname": ""
+ },
+ {
+ "avatarUrl": "",
+ "fullName": "Joe Carroll",
+ "id": "bf9bc5fd-7f04-46f4-abca-789f682379aa",
+ "nickname": "Carroll",
+ "phoneticNickname": ""
+ },
+ {
+ "avatarUrl": "",
+ "fullName": "Mike Mangialardi",
+ "id": "7d81d153-4e11-40fe-aa63-236943496991",
+ "nickname": "Mangialardi",
+ "phoneticNickname": ""
+ }
+]

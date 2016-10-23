@@ -10,29 +10,68 @@ import UIKit
 
 struct Champion: Equatable {
     let name: String
-    var phoeneticName: String
+    let nickname: String
+    let phoeneticName: String
     let avatar: String
+    let id: String // Network based ID
     
     var avatarImage: UIImage {
-        if let image = UIImage(named: avatar) {
-            return image
-        } else {
+        guard id != "" else {
             return UIImage(named: "default")!
         }
+        
+        return ImageStore.avatar(for: self)
     }
     
+    var lastName: String? {
+        return name.components(separatedBy: " ").last
+    }
+    
+    // TODO: This can probably go away when we remove 'ChampionsTome'
     init(name: String, avatar: String, phoeneticName: String = "") {
         self.name = name
+        self.nickname = "NICK"
         self.avatar = avatar
         self.phoeneticName = phoeneticName
-        if phoeneticName.characters.count == 0 {
-            self.phoeneticName = name
-        } else {
-            self.phoeneticName = phoeneticName
+        self.id = ""
+    }
+    
+    init?(jsonData: [String: Any]) {
+        guard let name = jsonData["fullName"] as? String,
+            let nickname = jsonData["nickname"] as? String,
+            let phoneticName = jsonData["phoneticNickname"] as? String,
+            let avatarURL = jsonData["avatarUrl"] as? String,
+            let id = jsonData["id"] as? String
+            else {
+                return nil
         }
+        
+        self.name = name
+        self.nickname = nickname
+        if phoneticName.characters.count == 0  {
+            if let lastName = name.components(separatedBy: " ").last {
+                self.phoeneticName = lastName
+            } else {
+                self.phoeneticName = name
+            }
+        } else {
+            self.phoeneticName = phoneticName
+        }
+        self.avatar = avatarURL
+        self.id = id
+    }
+    
+    func dictionaryRep() -> [String: Any] {
+        return [
+            "fullName": name,
+            "nickname": nickname,
+            "phoneticNickname": phoeneticName,
+            "avatarUrl": avatar,
+            "id": id
+        ]
     }
 }
 
 func ==(lhs: Champion, rhs: Champion) -> Bool {
-    return lhs.name == rhs.name
+    return lhs.id == rhs.id
 }

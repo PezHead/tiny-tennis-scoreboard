@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     // MARK:- Properties
     
     // Private properties
+    fileprivate var championList = [Champion]()
     fileprivate var removedView: UIImageView?
     fileprivate var input: Input?
     
@@ -180,15 +181,12 @@ class ViewController: UIViewController {
             print("Error initializing flic input")
         }
         
-        
-        // Network test
-        let url = URL(string: "https://mf-table-tennis-api.herokuapp.com/v1/players")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-            print(json)
+        ChampionStore.all { champs in
+            DispatchQueue.main.async {
+                self.championList = champs
+                self.championCollectionView.reloadData()
+            }
         }
-        
-        task.resume()
     }
     
     func handleTap(_ gesture: UITapGestureRecognizer) {
@@ -238,16 +236,16 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ChampionsTome().members.count
+        return championList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChampionCell", for: indexPath) as! ChampionCell
         
-        let champion = ChampionsTome().members[(indexPath as NSIndexPath).row]
+        let champion = championList[(indexPath as NSIndexPath).row]
         
         cell.imageView.image = champion.avatarImage
-        cell.nameLabel.text = champion.name
+        cell.nameLabel.text = champion.nickname
         
         if champions.contains(champion) {
             // Dim champion so they won't be selected twice
@@ -279,7 +277,7 @@ extension ViewController: UICollectionViewDelegate {
         //
         guard champions.count < 4 else { return }
         
-        let champion = ChampionsTome().members[(indexPath as NSIndexPath).row]
+        let champion = championList[(indexPath as NSIndexPath).row]
         guard !champions.contains(champion) else {
             print("This champion was already selected")
             return
