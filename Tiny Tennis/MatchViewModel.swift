@@ -32,12 +32,12 @@ struct MatchViewModel {
     }
     var leftAvatar: UIImage? {
         guard match.startTime != nil else { return nil }
-        return leftSideTeam == .red ? UIImage(named: (match.redTeam.first?.avatar)!)! : UIImage(named: (match.blueTeam.first?.avatar)!)!
+        return leftSideTeam == .red ? match.redTeam.first?.avatarImage : match.blueTeam.first?.avatarImage
     }
     
     var leftPartnerAvatar: UIImage? {
         guard match.startTime != nil else { return nil }
-        return leftSideTeam == .red ? UIImage(named: (match.redTeam.last?.avatar)!) : UIImage(named: (match.blueTeam.last?.avatar)!)
+        return leftSideTeam == .red ? match.redTeam.last?.avatarImage : match.blueTeam.last?.avatarImage
     }
     
     var leftChampionName: String? {
@@ -154,12 +154,12 @@ struct MatchViewModel {
     
     var rightAvatar: UIImage? {
         guard match.startTime != nil else { return nil }
-        return leftSideTeam == .red ? UIImage(named: (match.blueTeam.first?.avatar)!)! : UIImage(named: (match.redTeam.first?.avatar)!)!
+        return leftSideTeam == .red ? match.blueTeam.first?.avatarImage : match.redTeam.first?.avatarImage
     }
     
     var rightPartnerAvatar: UIImage? {
         guard match.startTime != nil else { return nil }
-        return leftSideTeam == .red ? UIImage(named: (match.blueTeam.last?.avatar)!)! : UIImage(named: (match.redTeam.last?.avatar)!)!
+        return leftSideTeam == .red ? match.blueTeam.last?.avatarImage : match.redTeam.last?.avatarImage
     }
     
     var rightWins: Int {
