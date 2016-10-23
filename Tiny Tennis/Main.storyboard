@@ -269,7 +269,7 @@
                                             <constraint firstAttribute="width" constant="325" id="jFX-iM-bjy"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lv-KO-BYF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2Lv-KO-BYF">
                                         <fontDescription key="fontDescription" type="system" pointSize="300"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -283,12 +283,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.23137254901960785" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2Lv-KO-BYF" secondAttribute="trailing" constant="65" id="8Zk-8c-jJd"/>
                                     <constraint firstItem="qdJ-ac-vNj" firstAttribute="top" secondItem="hXB-mf-p7n" secondAttribute="top" id="Aps-C5-eeF"/>
                                     <constraint firstItem="hXB-mf-p7n" firstAttribute="centerX" secondItem="lEc-d5-CI1" secondAttribute="centerX" id="BaL-Gc-i8o"/>
                                     <constraint firstItem="qdJ-ac-vNj" firstAttribute="leading" secondItem="lEc-d5-CI1" secondAttribute="leading" constant="15" id="BaZ-Lh-8RL"/>
                                     <constraint firstItem="qdJ-ac-vNj" firstAttribute="centerX" secondItem="Lpy-cM-POB" secondAttribute="centerX" id="CjL-aJ-UsL"/>
                                     <constraint firstItem="qdJ-ac-vNj" firstAttribute="centerX" secondItem="xEf-km-gv4" secondAttribute="centerX" id="FsB-xI-Zps"/>
                                     <constraint firstItem="hXB-mf-p7n" firstAttribute="top" secondItem="lEc-d5-CI1" secondAttribute="top" constant="40" id="QR2-tF-AyD"/>
+                                    <constraint firstItem="2Lv-KO-BYF" firstAttribute="leading" secondItem="lEc-d5-CI1" secondAttribute="leading" constant="66" id="U0G-8S-c0j"/>
                                     <constraint firstItem="2Lv-KO-BYF" firstAttribute="centerX" secondItem="lEc-d5-CI1" secondAttribute="centerX" id="X4E-fa-hjj"/>
                                     <constraint firstItem="xEf-km-gv4" firstAttribute="bottom" secondItem="L7k-wk-ErP" secondAttribute="bottom" id="bCI-ri-5Xl"/>
                                     <constraint firstAttribute="bottom" secondItem="2Lv-KO-BYF" secondAttribute="bottom" constant="70" id="ec5-TO-fEe"/>
@@ -373,7 +375,7 @@
                                             <constraint firstAttribute="height" constant="60" id="bpy-jp-Xcf"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-04-ih7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-04-ih7">
                                         <fontDescription key="fontDescription" type="system" pointSize="300"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -386,6 +388,8 @@
                                     <constraint firstItem="u8p-BU-Xid" firstAttribute="centerX" secondItem="mIf-HB-fK6" secondAttribute="centerX" id="Pq6-FR-wOZ"/>
                                     <constraint firstItem="7kN-04-ih7" firstAttribute="centerX" secondItem="mIf-HB-fK6" secondAttribute="centerX" id="cXO-L9-j6s"/>
                                     <constraint firstItem="NH2-R7-cT2" firstAttribute="centerX" secondItem="DZ3-l4-uag" secondAttribute="centerX" id="he6-1L-nno"/>
+                                    <constraint firstItem="7kN-04-ih7" firstAttribute="leading" secondItem="mIf-HB-fK6" secondAttribute="leading" constant="66" id="kew-bo-d7S"/>
+                                    <constraint firstAttribute="trailing" secondItem="7kN-04-ih7" secondAttribute="trailing" constant="65" id="pga-DJ-Zhl"/>
                                     <constraint firstItem="NH2-R7-cT2" firstAttribute="centerX" secondItem="UCJ-En-tV9" secondAttribute="centerX" id="zwx-ED-5Xb"/>
                                 </constraints>
                             </view>

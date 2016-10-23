@@ -22,6 +22,10 @@ struct MatchViewModel {
     var delegate: MatchViewModelDelegate?
     
     var leftScore: String {
+        if !warmupEnded {
+            return "WARM"
+        }
+        
         guard let game = match.currentGame else { return "XX" }
         return leftSideTeam == .red ? "\(game.redScore)" : "\(game.blueScore)"
     }
@@ -143,6 +147,10 @@ struct MatchViewModel {
     }
     
     var rightScore: String {
+        if !warmupEnded {
+            return " UP     "
+        }
+        
         guard let game = match.currentGame else { return "XX" }
         return leftSideTeam == .red ? "\(game.blueScore)" : "\(game.redScore)"
     }
@@ -200,6 +208,7 @@ struct MatchViewModel {
     // Private properties
     fileprivate var match = Match()
     fileprivate var leftSideTeam: Team = .red
+    private var warmupEnded = false
     
     
     // MARK: - Public Methods
@@ -213,7 +222,7 @@ struct MatchViewModel {
         match.startMatch()
         delegate?.didUpdateProperty()
         
-        Announcer.shared.announceScore(withMatch: match)
+        Announcer.shared.announceMatchStart(match)
     }
     
     mutating func resetMatch() {
@@ -235,6 +244,20 @@ struct MatchViewModel {
     
     mutating func addPointFor(_ side: Side) {
         guard match.startTime != nil else { return }
+        
+        // The first registered input should switch from "warmup" to starting the match.
+        if !warmupEnded {
+            warmupEnded = true
+            
+            // FIXME: A bit of a sledge hammer in order to reset the game duration value.
+            // Better would be to not have this actually start counting until the warmup is finished.
+            match.resetGameDuration()
+            
+            delegate?.didUpdateProperty()
+            Announcer.shared.announceScore(withMatch: match)
+            
+            return
+        }
         
         if (side == .left && leftSideTeam == .red) || (side == .right && leftSideTeam == .blue) {
             match.addPoint(.red)

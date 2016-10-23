@@ -89,11 +89,8 @@ class ScoreboardViewController: UIViewController {
         
         viewModel.delegate = self
         
-        viewModel.startMatch()
-        
         // Used to update the match duration every minute
         minuteTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
-        
         
         let addScoreGesture = UITapGestureRecognizer(target: self, action: #selector(addScore))
         addScoreGesture.numberOfTapsRequired = 1
@@ -108,6 +105,8 @@ class ScoreboardViewController: UIViewController {
         let secretGesture = UILongPressGestureRecognizer(target: self, action: #selector(superSecretServerToggle))
         secretGesture.minimumPressDuration = 2.0
         leftAvatar.addGestureRecognizer(secretGesture)
+        
+        viewModel.startMatch()
     }
     
     @IBAction func handleBack(_ sender: AnyObject) {

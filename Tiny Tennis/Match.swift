@@ -291,6 +291,10 @@ class Match {
         
         delegate?.didUpdateScore()  // Again, something like didStartNewGame??
     }
+    
+    func resetGameDuration() {
+        startTime = Date()
+    }
 }
 
 
