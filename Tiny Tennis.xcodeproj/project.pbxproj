@@ -17,6 +17,7 @@
 		8D1CB9FB1DB90F280074603D /* Champions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D1CB9FA1DB90F280074603D /* Champions.json */; };
 		8D1CB9FD1DB923D40074603D /* ChampionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CB9FC1DB923D40074603D /* ChampionStore.swift */; };
 		8D1CB9FF1DB9353E0074603D /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CB9FE1DB9353E0074603D /* ImageStore.swift */; };
+		8D1CBA011DC197800074603D /* FruitButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CBA001DC197800074603D /* FruitButtons.swift */; };
 		8D4AA2081DB2984600FE9F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2071DB2984600FE9F68 /* AppDelegate.swift */; };
 		8D4AA20A1DB2984600FE9F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2091DB2984600FE9F68 /* ViewController.swift */; };
 		8D4AA2121DB2984600FE9F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		8D1CB9FA1DB90F280074603D /* Champions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Champions.json; sourceTree = "<group>"; };
 		8D1CB9FC1DB923D40074603D /* ChampionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionStore.swift; sourceTree = "<group>"; };
 		8D1CB9FE1DB9353E0074603D /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		8D1CBA001DC197800074603D /* FruitButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitButtons.swift; sourceTree = "<group>"; };
 		8D4AA2041DB2984600FE9F68 /* Tiny Tennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Tennis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4AA2071DB2984600FE9F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D4AA2091DB2984600FE9F68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				8D4AA2211DB29B2500FE9F68 /* Config.swift */,
 				8D4AA23C1DB29DA100FE9F68 /* Announcer.swift */,
 				8D4AA2251DB29B6200FE9F68 /* Input.swift */,
+				8D1CBA001DC197800074603D /* FruitButtons.swift */,
 				8D1CB9F81DB2A8130074603D /* API.swift */,
 			);
 			name = Helpers;
@@ -306,6 +309,7 @@
 				8D1CB9F91DB2A8130074603D /* API.swift in Sources */,
 				8D4AA21C1DB29AD200FE9F68 /* ChampionCell.swift in Sources */,
 				8D4AA2201DB29B0000FE9F68 /* ChampionsTome.swift in Sources */,
+				8D1CBA011DC197800074603D /* FruitButtons.swift in Sources */,
 				8D4AA23D1DB29DA100FE9F68 /* Announcer.swift in Sources */,
 				8D1CB9FF1DB9353E0074603D /* ImageStore.swift in Sources */,
 				8D4AA20A1DB2984600FE9F68 /* ViewController.swift in Sources */,

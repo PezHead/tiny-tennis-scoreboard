@@ -12,4 +12,7 @@ struct Config {
     static let slackChannel = "#thundercat"
     
     static let urlScheme = "tinytennis"
+    
+    static let fruitAddress = "<PI_SERVER_ADDRESS>"
+    static let fruitPort: UInt32 = 1234
 }

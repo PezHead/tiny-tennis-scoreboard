@@ -27,7 +27,8 @@ class ViewController: UIViewController {
     // Private properties
     fileprivate var championList = [Champion]()
     fileprivate var removedView: UIImageView?
-    fileprivate var input: Input?
+    fileprivate var input: FlicInput?
+    fileprivate var fruitInput: FruitButton?
     
     // If array conatains 1 or 2 then first is Left Team, second is Right Team
     // If array contains 3 or 4 then first two are Left Team, second two (or just third) is Right Team
@@ -181,6 +182,8 @@ class ViewController: UIViewController {
             print("Error initializing flic input")
         }
         
+        fruitInput = FruitButton()
+        
         ChampionStore.all { champs in
             DispatchQueue.main.async {
                 self.championList = champs
@@ -230,6 +233,7 @@ class ViewController: UIViewController {
             }
             
             input?.delegate = destVC
+            fruitInput?.delegate = destVC
         }
     }
 }
