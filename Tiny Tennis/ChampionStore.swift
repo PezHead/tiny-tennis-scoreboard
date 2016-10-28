@@ -17,23 +17,22 @@ class ChampionStore {
     static func all(_ completion: @escaping ([Champion]) -> Void) {
         var championList = [Champion]()
         
-//        // First load players from the json stored in App Bundle
-//        if let fileURL = Bundle.main.url(forResource: "Champions", withExtension: "json") {
-        
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let path = dir.appendingPathComponent("combinedPlayers.json")
-            let jsonData = try? Data(contentsOf: path)
-            let json = try? JSONSerialization.jsonObject(with: jsonData!, options: [])
             
-            if let peeps = json as? [Any] {
-                for case let playerObj as [String: Any] in peeps {
-                    if let champ = Champion(jsonData: playerObj) {
-                        championList.append(champ)
-                    }
-                }
+            if let jsonData = try? Data(contentsOf: path) {
+                let json = try? JSONSerialization.jsonObject(with: jsonData, options: [])
                 
-                // FIXME: Not a huge fan of calling the completion twice (once for cache, once for network).
-                completion(championList)
+                if let peeps = json as? [Any] {
+                    for case let playerObj as [String: Any] in peeps {
+                        if let champ = Champion(jsonData: playerObj) {
+                            championList.append(champ)
+                        }
+                    }
+                    
+                    // FIXME: Not a huge fan of calling the completion twice (once for cache, once for network).
+                    completion(championList)
+                }
             }
         }
         
