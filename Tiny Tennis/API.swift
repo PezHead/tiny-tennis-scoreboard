@@ -19,7 +19,7 @@ class API {
         let url = URL(string: "https://mf-table-tennis-api.herokuapp.com/v1/players")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
-                print(error)
+                print(error as Any)
                 return
             }
             

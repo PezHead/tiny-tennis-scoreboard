@@ -368,11 +368,6 @@ private extension Match {
         request.httpBody = messageData
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(error)
-            print(response)
-            let d = String(data: data!, encoding: .utf8)
-            print(d)
-            
             let json = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:AnyObject]
             let channel = json["channel"] as! String
             
@@ -420,8 +415,8 @@ private extension Match {
         request.httpBody = messageData
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(error)
-            print(response)
+            print(error as Any)
+            print(response as Any)
         }
         task.resume()
     }
