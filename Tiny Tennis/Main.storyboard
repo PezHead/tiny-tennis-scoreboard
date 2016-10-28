@@ -591,64 +591,6 @@
             </objects>
             <point key="canvasLocation" x="417" y="941"/>
         </scene>
-        <!--Champion Chooser View Controller-->
-        <scene sceneID="x9E-Ze-Af7">
-            <objects>
-                <collectionViewController storyboardIdentifier="ChampionChooserVC" id="Cnz-wQ-u0c" customClass="ChampionChooserViewController" customModule="Tiny_Tennis" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3eW-zL-OLI">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RYc-vK-0JZ">
-                            <size key="itemSize" width="264" height="233"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChampionCell" id="Gre-Cp-37d" customClass="ChampionCell" customModule="Tiny_Tennis" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="264" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="264" height="233"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grj-i2-R67">
-                                            <rect key="frame" x="8" y="8" width="248" height="181.5"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-EA-Adw">
-                                            <rect key="frame" x="111" y="204.5" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </view>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="wMm-EA-Adw" firstAttribute="bottom" secondItem="Gre-Cp-37d" secondAttribute="bottomMargin" id="9XR-bG-fpP"/>
-                                    <constraint firstItem="grj-i2-R67" firstAttribute="centerX" secondItem="wMm-EA-Adw" secondAttribute="centerX" id="OQ3-OZ-dDX"/>
-                                    <constraint firstItem="grj-i2-R67" firstAttribute="trailing" secondItem="Gre-Cp-37d" secondAttribute="trailingMargin" id="Or7-gb-Azm"/>
-                                    <constraint firstItem="wMm-EA-Adw" firstAttribute="top" secondItem="grj-i2-R67" secondAttribute="bottom" constant="15" id="QiU-Dv-yJQ"/>
-                                    <constraint firstItem="grj-i2-R67" firstAttribute="top" secondItem="Gre-Cp-37d" secondAttribute="topMargin" id="RE5-zE-bpv"/>
-                                    <constraint firstItem="grj-i2-R67" firstAttribute="leading" secondItem="Gre-Cp-37d" secondAttribute="leadingMargin" id="gRj-2t-6LP"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="imageView" destination="grj-i2-R67" id="VTd-sD-Pah"/>
-                                    <outlet property="nameLabel" destination="wMm-EA-Adw" id="Or3-NM-KaU"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="Cnz-wQ-u0c" id="kTj-Zf-pK3"/>
-                            <outlet property="delegate" destination="Cnz-wQ-u0c" id="Pas-Ck-i7I"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ypD-dg-VwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1504" y="173"/>
-        </scene>
     </scenes>
     <resources>
         <image name="dbireta" width="128" height="128"/>

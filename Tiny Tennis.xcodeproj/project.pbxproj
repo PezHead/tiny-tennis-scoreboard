@@ -23,7 +23,6 @@
 		8D4AA2121DB2984600FE9F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */; };
 		8D4AA21A1DB29A8F00FE9F68 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2191DB29A8F00FE9F68 /* Champion.swift */; };
 		8D4AA21C1DB29AD200FE9F68 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */; };
-		8D4AA21E1DB29AE900FE9F68 /* ChampionChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */; };
 		8D4AA2201DB29B0000FE9F68 /* ChampionsTome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */; };
 		8D4AA2221DB29B2500FE9F68 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2211DB29B2500FE9F68 /* Config.swift */; };
 		8D4AA2241DB29B4800FE9F68 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2231DB29B4800FE9F68 /* Game.swift */; };
@@ -72,7 +71,6 @@
 		8D4AA2131DB2984600FE9F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D4AA2191DB29A8F00FE9F68 /* Champion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
-		8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionChooserViewController.swift; sourceTree = "<group>"; };
 		8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionsTome.swift; sourceTree = "<group>"; };
 		8D4AA2211DB29B2500FE9F68 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8D4AA2231DB29B4800FE9F68 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				8D4AA2091DB2984600FE9F68 /* ViewController.swift */,
-				8D4AA21D1DB29AE900FE9F68 /* ChampionChooserViewController.swift */,
 				8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */,
 				8D4AA22F1DB29BDE00FE9F68 /* ScoreboardViewController.swift */,
 			);
@@ -319,7 +316,6 @@
 				8D4AA2221DB29B2500FE9F68 /* Config.swift in Sources */,
 				8D4AA22A1DB29B9600FE9F68 /* MatchVictoryViewController.swift in Sources */,
 				8D4AA2351DB29C6C00FE9F68 /* Chameleon.m in Sources */,
-				8D4AA21E1DB29AE900FE9F68 /* ChampionChooserViewController.swift in Sources */,
 				8D4AA2081DB2984600FE9F68 /* AppDelegate.swift in Sources */,
 				8D1CB9E71DB29ED90074603D /* SCLFlicButtonSimulator.m in Sources */,
 				8D4AA2261DB29B6200FE9F68 /* Input.swift in Sources */,
