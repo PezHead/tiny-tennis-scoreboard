@@ -37,8 +37,6 @@ class ScoreboardViewController: UIViewController {
     @IBOutlet var blueGame2: UIImageView!
     @IBOutlet var blueGame3: UIImageView!
     
-    @IBOutlet var muteButton: UIButton!
-    
     var minuteTimer = Timer()
     var gameCount = 1
     
@@ -162,10 +160,6 @@ class ScoreboardViewController: UIViewController {
         leftPartnerServiceLabel.backgroundColor = leftPartnerServiceLabel.text == "." ? UIColor.clear : UIColor.black.withAlphaComponent(0.15)
         rightServiceLabel.backgroundColor = rightServiceLabel.text == "." ? UIColor.clear : UIColor.black.withAlphaComponent(0.15)
         rightPartnerServiceLabel.backgroundColor = rightPartnerServiceLabel.text == "." ? UIColor.clear : UIColor.black.withAlphaComponent(0.15)
-        
-        
-        // Not in the viewModel
-        muteButton.setTitle(isMuted ? "UN-MUTE" : "MUTE", for: UIControlState())
     }
     
     func addScore(_ tap: UITapGestureRecognizer) {
@@ -236,15 +230,6 @@ extension ScoreboardViewController: MatchViewModelDelegate {
         }
         
         
-    }
-}
-
-extension ScoreboardViewController: ChooserDelegate {
-    func didSelectChampion(_ champion: Champion) {
-        let side: Side = (chooserLeft) ? .left : .right
-        viewModel.setChampions([champion], forSide: side)
-        
-        dismiss(animated: true, completion: nil)
     }
 }
 
