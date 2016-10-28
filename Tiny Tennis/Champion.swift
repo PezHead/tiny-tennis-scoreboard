@@ -20,7 +20,7 @@ struct Champion: Equatable {
             return UIImage(named: "default")!
         }
         
-        return ImageStore.avatar(for: self)
+        return ImageStore.shared.avatar(for: self)
     }
     
     var lastName: String? {

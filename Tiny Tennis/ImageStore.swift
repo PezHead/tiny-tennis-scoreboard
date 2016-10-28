@@ -10,6 +10,21 @@
 /// Provides access to all images. 
 /// Currently this is just champion avatars.
 class ImageStore {
+    static let shared = ImageStore()
+    
+    /// Upon initialization, an "Images" directory will be created.
+    private init() {
+        if let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let imagesDirPath = documentsPath.appendingPathComponent("Images", isDirectory: true)
+            
+            do {
+                // Per Apple recommendations, always try to create the folder instead of checking if it already exists first.
+                try FileManager.default.createDirectory(at: imagesDirPath, withIntermediateDirectories: false, attributes: nil)
+            } catch {
+                print("Error creating /Images directory: \(error)")
+            }
+        }
+    }
     
     /// Returns an avatar for a given champion. This will look for images in the following order:
     /// * Check to see if a downloaded image has been cached in the 'Documents/Images' directory
@@ -19,7 +34,7 @@ class ImageStore {
     /// - parameter champion: The `Champion` for which the image is being requested.
     ///
     /// - returns: Matching avatar image if found, else returns the "default.png" image.
-    static func avatar(for champion: Champion) -> UIImage {
+    func avatar(for champion: Champion) -> UIImage {
         var avatarImage = UIImage(named: "default")!
         
         if let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
