@@ -347,19 +347,19 @@ private extension Match {
     func postMatchStartToSlack() {
         guard Config.slackToken != "<SLACK_TOKEN>" else { return }
         
-        let announcements = [
-            "Grab your popcorn, a match is starting!",
-            "Yo dawg, I heard you like to watch ping-pong",
-            "A tiny tennis match is underway",
-            "To the small green court!"
-        ]
-        let randomIndex = Int(arc4random_uniform(UInt32(announcements.count)))
-        let randomMessage = announcements[randomIndex]
+//        let announcements = [
+//            "Grab your popcorn, a match is starting!",
+//            "Yo dawg, I heard you like to watch ping-pong",
+//            "A tiny tennis match is underway",
+//            "To the small green court!"
+//        ]
+//        let randomIndex = Int(arc4random_uniform(UInt32(announcements.count)))
+//        let randomMessage = announcements[randomIndex]
         
         let redPlayers = redTeam.map{$0.name}.joined(separator: "/")
         let bluePlayers = blueTeam.map{$0.name}.joined(separator: "/")
         
-        let message = "username=Score Bot&icon_emoji=:pingpong:&channel=\(Config.slackChannel)&text=\(randomMessage)&attachments=[{ 'title': '\(redPlayers) vs. \(bluePlayers)', 'fallback': '\(redPlayers) vs \(bluePlayers)' }]&token=\(Config.slackToken)"
+        let message = "username=Score Bot&icon_emoji=:pingpong:&channel=\(Config.slackChannel)&attachments=[{ 'title': '\(redPlayers) vs. \(bluePlayers)', 'footer': 'Warming up', 'fallback': '\(redPlayers) vs \(bluePlayers)' }]&token=\(Config.slackToken)"
         let messageData = message.data(using: String.Encoding.utf8)
         
         let url = URL(string: "https://slack.com/api/chat.postMessage")!
