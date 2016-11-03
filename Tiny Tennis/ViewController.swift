@@ -192,6 +192,14 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        champions.removeAll()
+        championCollectionView.reloadData()
+    }
+    
+    
     func handleTap(_ gesture: UITapGestureRecognizer) {
         if gesture.view == leftPlayerImageView {
             removedView = leftPlayerImageView
