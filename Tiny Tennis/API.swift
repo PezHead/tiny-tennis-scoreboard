@@ -17,11 +17,25 @@ class API {
     /// - parameter completion: Clousre to be run on a successful response being handled.
     static func getPlayers(_ completion: @escaping ([Champion]) -> Void) {
         let url = URL(string: "https://mf-table-tennis-api.herokuapp.com/v1/players")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        var request = URLRequest(url: url)
+        request.addValue("Bearer \(Config.apiKey)", forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
                 print(error as Any)
                 return
             }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Error getting HTTP response")
+                return
+            }
+            
+            guard httpResponse.statusCode == 200 else {
+                print("Returned code other than 200: \(httpResponse)")
+                return
+            }
+            
             
             if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) {
                 if let results = json as? [Any] {

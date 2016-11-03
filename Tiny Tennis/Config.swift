@@ -11,6 +11,8 @@ struct Config {
     //    static let slackChannel = "#tabletennis"
     static let slackChannel = "#thundercat"
     
+    static let apiKey = "<API_KEY>"
+    
     static let urlScheme = "tinytennis"
     
     static let fruitAddress = "<PI_SERVER_ADDRESS>"
