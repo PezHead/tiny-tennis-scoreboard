@@ -359,7 +359,7 @@ private extension Match {
         let redPlayers = redTeam.map{$0.name}.joined(separator: "/")
         let bluePlayers = blueTeam.map{$0.name}.joined(separator: "/")
         
-        let message = "username=Score Bot&icon_emoji=:pingpong:&channel=\(Config.slackChannel)&text=<!here> \(randomMessage)&attachments=[{ 'title': '\(redPlayers) vs. \(bluePlayers)', 'fallback': '\(redPlayers) vs \(bluePlayers)' }]&token=\(Config.slackToken)"
+        let message = "username=Score Bot&icon_emoji=:pingpong:&channel=\(Config.slackChannel)&text=\(randomMessage)&attachments=[{ 'title': '\(redPlayers) vs. \(bluePlayers)', 'fallback': '\(redPlayers) vs \(bluePlayers)' }]&token=\(Config.slackToken)"
         let messageData = message.data(using: String.Encoding.utf8)
         
         let url = URL(string: "https://slack.com/api/chat.postMessage")!
