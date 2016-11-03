@@ -20,8 +20,11 @@ class ImageStore {
             do {
                 // Per Apple recommendations, always try to create the folder instead of checking if it already exists first.
                 try FileManager.default.createDirectory(at: imagesDirPath, withIntermediateDirectories: false, attributes: nil)
-            } catch {
-                print("Error creating /Images directory: \(error)")
+            } catch let error as NSError {
+                // Ignore "directory already exists" error
+                if error.code != 516 {
+                    print("Error creating /Images directory: \(error)")
+                }
             }
         }
     }
