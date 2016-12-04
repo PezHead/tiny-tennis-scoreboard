@@ -104,13 +104,13 @@ struct Game {
     mutating func addPoint(_ team: Team) {
         switch team {
         case .red:
-            redScore += 1
             let pointWinner = redPlayers.contains(currentServer) ? currentServer : currentReceiver
-            pointTracker.append(Point(server: currentServer, receiver: currentReceiver, winner: pointWinner))
+            pointTracker.append(Point(server: currentServer, receiver: currentReceiver, winner: pointWinner, order: pointTracker.count))
+            redScore += 1
         case .blue:
-            blueScore += 1
             let pointWinner = bluePlayers.contains(currentServer) ? currentServer : currentReceiver
-            pointTracker.append(Point(server: currentServer, receiver: currentReceiver, winner: pointWinner))
+            pointTracker.append(Point(server: currentServer, receiver: currentReceiver, winner: pointWinner, order: pointTracker.count))
+            blueScore += 1
         }
     }
     
