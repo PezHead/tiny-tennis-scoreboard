@@ -134,4 +134,16 @@ struct Game {
             }
         }
     }
+    
+    func jsonData() -> [String:Any] {
+        let pointJSON = pointTracker.map { $0.jsonData() }
+        
+        return [
+            "winner": redScore > blueScore ? redPlayers.first!.id : bluePlayers.first!.id,
+            "winningScore": redScore > blueScore ? redScore : blueScore,
+            "loser": redScore > blueScore ? bluePlayers.first!.id : redPlayers.first!.id,
+            "losingScore": redScore > blueScore ? blueScore : redScore,
+            "points": pointJSON
+        ]
+    }
 }

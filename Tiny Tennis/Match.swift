@@ -318,13 +318,27 @@ private extension Match {
             let directory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true).first!
             let path = URL(fileURLWithPath: directory).appendingPathComponent(file)
             
-            let summary = "\(winningTeam) def. \(losingTeam) | \(scoreSummary) | \(duration) | \(Date().description)\n"
+            let summary = "\n\n----------\n\(winningTeam) def. \(losingTeam) | \(scoreSummary) | \(duration) | \(Date().description)\n"
             let summaryData = summary.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+            
+            var apiData: Data?
+            if JSONSerialization.isValidJSONObject(jsonData()) {
+                apiData = try? JSONSerialization.data(withJSONObject: jsonData(), options: JSONSerialization.WritingOptions.prettyPrinted)
+            } else {
+                print("WARNING: API data summary is not a valid JSON object")
+            }
             
             if FileManager.default.fileExists(atPath: path.path) {
                 if let fileHandle = FileHandle(forWritingAtPath: path.path) {
                     fileHandle.seekToEndOfFile()
                     fileHandle.write(summaryData)
+                    
+                    if let apiData = apiData {
+                        fileHandle.write(apiData)
+                    } else {
+                        print("WARNING: Failed writing API data to the log :[")
+                    }
+                    
                     fileHandle.closeFile()
                 }
             } else {
@@ -344,6 +358,22 @@ private extension Match {
         }
     }
     
+    func jsonData() -> [String:Any] {
+        let iso = ISO8601DateFormatter()
+        
+        let gamesJSON = games.map { $0.jsonData() }
+        
+        return [
+            "winner": redWins > blueWins ? redTeam.first!.id : blueTeam.first!.id,
+            "loser": redWins > blueWins ? blueTeam.first!.id : redTeam.first!.id,
+            "firstServer": initialFirstServe == .red ? redTeam.first!.id : blueTeam.first!.id,
+            "startTime": iso.string(from: startTime!),
+            "endTime": iso.string(from: endTime!),
+            "games": gamesJSON
+        ]
+    }
+    
+    // MARK: - Slack Methods
     func postMatchStartToSlack() {
         guard Config.slackToken != "<SLACK_TOKEN>" else { return }
         

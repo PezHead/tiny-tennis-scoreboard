@@ -10,4 +10,13 @@ struct Point {
     let server: Champion
     let receiver: Champion
     let winner: Champion
+    let order: Int
+    
+    func jsonData() -> [String:Any] {
+        return [
+            "server": server.id,
+            "receiver": receiver.id,
+            "winner": winner.id
+        ]
+    }
 }
