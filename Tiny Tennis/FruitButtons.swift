@@ -38,6 +38,7 @@ class FruitButton: NSObject, Input, StreamDelegate {
                 
                 while (inStream.hasBytesAvailable) {
                     _ = inStream.read(&buffer, maxLength: buffer.count)
+                    
                     if let incomingData = String(bytes: buffer, encoding: .utf8) {
                         print(incomingData)
                         

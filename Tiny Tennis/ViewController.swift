@@ -162,6 +162,7 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK: - View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -183,6 +184,9 @@ class ViewController: UIViewController {
         }
         
         fruitInput = FruitButton()
+        if !fruitInput!.initialize() {
+            print("Error initializing fruit buttons")
+        }
         
         ChampionStore.all { champs in
             DispatchQueue.main.async {
