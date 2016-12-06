@@ -37,7 +37,7 @@ class ChampionStore {
         }
         
         // Request players from API
-        API.getPlayers { champions in
+        API.shared.getPlayers { champions in
             champions.forEach { champ in
                 // Merge updated players with exisitng players
                 // Simple approach: Just add players that don't already exist

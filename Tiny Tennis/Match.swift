@@ -337,7 +337,7 @@ private extension Match {
                         fileHandle.write(apiData)
                         
                         if type == .singles {
-                            API.createSinglesMatch(with: apiData)
+                            API.shared.createSinglesMatch(with: apiData)
                         }
                     } else {
                         print("WARNING: Failed writing API data to the log :[")
