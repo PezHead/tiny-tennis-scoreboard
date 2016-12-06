@@ -75,14 +75,14 @@ class API {
                 return
             }
             
-            guard httpResponse.statusCode == 200 else {
+            guard httpResponse.statusCode == 201 else {
                 print("Returned code other than 200: \(httpResponse)")
                 return
             }
             
             if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) {
-                if let results = json as? [Any], let result = results.first as? [String:Any] {
-                    print("Successfully created singles match with id: \(result["id"])")
+                if let jsonData = json as? [String:Any] {
+                    print("Successfully created singles match with id: \(jsonData["id"])")
                 }
             }
         }

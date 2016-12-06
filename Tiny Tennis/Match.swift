@@ -449,8 +449,8 @@ private extension Match {
         request.httpBody = messageData
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(error as Any)
-            print(response as Any)
+//            print(error as Any)
+//            print(response as Any)
         }
         task.resume()
     }
@@ -467,7 +467,7 @@ private extension Match {
         request.httpBody = messageData
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-            print("\(response): \(error)")
+//            print("\(response): \(error)")
         })
         
         task.resume()

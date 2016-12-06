@@ -123,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				8D4AA2091DB2984600FE9F68 /* ViewController.swift */,
-				8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */,
 				8D4AA22F1DB29BDE00FE9F68 /* ScoreboardViewController.swift */,
+				8D4AA2291DB29B9600FE9F68 /* MatchVictoryViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
