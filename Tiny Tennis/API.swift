@@ -13,11 +13,11 @@ import UIKit
 class API {
     static let shared = API()
     
-    private let config = URLSessionConfiguration.default
-    private let session: URLSession
-    private let baseURL = URL(string: "https://mf-table-tennis-api.herokuapp.com/v1")!
+    fileprivate let config = URLSessionConfiguration.default
+    fileprivate let session: URLSession
+    fileprivate let baseURL = URL(string: "https://mf-table-tennis-api.herokuapp.com/v1")!
     
-    private init() {
+    fileprivate init() {
         config.httpAdditionalHeaders = ["Authorization": "Bearer \(Config.apiKey)"]
         session = URLSession(configuration: config)
     }

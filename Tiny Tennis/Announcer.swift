@@ -15,12 +15,12 @@ class Announcer {
     typealias Seconds = TimeInterval
     
     static let shared = Announcer()
-    public var isMuted = false
+    open var isMuted = false
     
-    private let audioPlayer: AVAudioPlayer
-    private let synthesizer = AVSpeechSynthesizer()
+    fileprivate let audioPlayer: AVAudioPlayer
+    fileprivate let synthesizer = AVSpeechSynthesizer()
     
-    private init() {
+    fileprivate init() {
         if let blip = NSDataAsset(name: "PointBlip") {
             do {
                 try audioPlayer = AVAudioPlayer(data: blip.data, fileTypeHint: AVFileTypeWAVE)
@@ -37,7 +37,7 @@ class Announcer {
         }
     }
     
-    private func say(_ message: String, withDelay delay: Seconds = 0) {
+    fileprivate func say(_ message: String, withDelay delay: Seconds = 0) {
         // Cut off any in-progress announcements
         synthesizer.stopSpeaking(at: .immediate)
         

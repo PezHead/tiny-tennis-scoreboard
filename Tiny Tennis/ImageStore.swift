@@ -13,7 +13,7 @@ class ImageStore {
     static let shared = ImageStore()
     
     /// Upon initialization, an "Images" directory will be created.
-    private init() {
+    fileprivate init() {
         if let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let imagesDirPath = documentsPath.appendingPathComponent("Images", isDirectory: true)
             

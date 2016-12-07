@@ -27,8 +27,8 @@ class FlicInput: NSObject, Input, SCLFlicManagerDelegate, SCLFlicButtonDelegate 
     // Properties
     weak var delegate: InputDelegate?
     
-    private var buttonMap = [UUID : Team]()
-    private var lastButtonPress = TimeInterval(0)
+    fileprivate var buttonMap = [UUID : Team]()
+    fileprivate var lastButtonPress = TimeInterval(0)
     
     
     // Input protocol methods
@@ -78,7 +78,7 @@ class FlicInput: NSObject, Input, SCLFlicManagerDelegate, SCLFlicButtonDelegate 
         guard queued == false else { return }
         
         // Try to avoid accidental rapid-fire single clicks.
-        guard NSDate.timeIntervalSinceReferenceDate - lastButtonPress > 1.5 else { return }
+        guard Date.timeIntervalSinceReferenceDate - lastButtonPress > 1.5 else { return }
         
         // add point red/blue
         if buttonMap[button.buttonIdentifier] == .red {
@@ -89,7 +89,7 @@ class FlicInput: NSObject, Input, SCLFlicManagerDelegate, SCLFlicButtonDelegate 
             fatalError("single click received from a button that is not currently mapped!")
         }
         
-        lastButtonPress = NSDate.timeIntervalSinceReferenceDate
+        lastButtonPress = Date.timeIntervalSinceReferenceDate
     }
     
     func flicButton(_ button: SCLFlicButton, didReceiveButtonHold queued: Bool, age: Int) {

@@ -199,7 +199,7 @@ class ScoreboardViewController: UIViewController {
         }
     }
     
-    @objc private func superSecretServerToggle(gesture: UILongPressGestureRecognizer) {
+    @objc fileprivate func superSecretServerToggle(_ gesture: UILongPressGestureRecognizer) {
         guard gesture.state == .began else { return }
         
         viewModel.toggleInitialServer()

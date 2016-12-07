@@ -346,6 +346,7 @@ private extension Match {
                     fileHandle.closeFile()
                 }
             } else {
+                // TODO: Make sure to send game summary to the API for the very first recorded game as well!
                 try! summaryData.write(to: path, options: .atomic)
             }
             

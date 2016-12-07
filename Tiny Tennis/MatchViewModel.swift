@@ -208,7 +208,7 @@ struct MatchViewModel {
     // Private properties
     fileprivate var match = Match()
     fileprivate var leftSideTeam: Team = .red
-    private var warmupEnded = false
+    fileprivate var warmupEnded = false
     
     
     // MARK: - Public Methods

@@ -7,9 +7,9 @@
 //
 
 class FruitButton: NSObject, Input, StreamDelegate {
-    private var inStream: InputStream!
-    private let address: CFString = Config.fruitAddress as CFString
-    private let port: UInt32 = Config.fruitPort
+    fileprivate var inStream: InputStream!
+    fileprivate let address: CFString = Config.fruitAddress as CFString
+    fileprivate let port: UInt32 = Config.fruitPort
     
     weak var delegate: InputDelegate?
     
