@@ -6,6 +6,8 @@
 //  Copyright © 2016 David Bireta. All rights reserved.
 //
 
+import TableTennisAPI
+
 struct ChampionsTome {
     let members = [
         Champion(name: "Bireta", avatar: "dbireta", phoeneticName: "Burredta"),

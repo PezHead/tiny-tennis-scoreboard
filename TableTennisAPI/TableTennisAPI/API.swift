@@ -10,8 +10,8 @@ import UIKit
 
 
 /// Manages all interactions with the table-tennis API.
-class API {
-    static let shared = API()
+public class API {
+    public static let shared = API()
     
     fileprivate let config = URLSessionConfiguration.default
     fileprivate let session: URLSession
@@ -25,7 +25,7 @@ class API {
     /// Retrieves all player objects.
     ///
     /// - parameter completion: Clousre to be run on a successful response being handled.
-    func getPlayers(_ completion: @escaping ([Champion]) -> Void) {
+    public func getPlayers(_ completion: @escaping ([Champion]) -> Void) {
         let url = baseURL.appendingPathComponent("players")
         let request = URLRequest(url: url)
         
@@ -65,7 +65,7 @@ class API {
         task.resume()
     }
     
-    func createSinglesMatch(with jsonData: Data) {
+    public func createSinglesMatch(with jsonData: Data) {
         let url = baseURL.appendingPathComponent("singles")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

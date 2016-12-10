@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TableTennisAPI
 
 enum Side {
     case left

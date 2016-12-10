@@ -6,6 +6,8 @@
 //  Copyright © 2016 David Bireta. All rights reserved.
 //
 
+import TableTennisAPI
+
 
 /// Provides access to available `Champion`s.
 class ChampionStore {

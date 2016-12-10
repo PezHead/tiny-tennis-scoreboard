@@ -8,14 +8,14 @@
 
 import UIKit
 
-struct Champion: Equatable {
-    let name: String
-    let nickname: String
-    let phoeneticName: String
-    let avatar: String
-    let id: String // Network based ID
+public struct Champion: Equatable {
+    public let name: String
+    public let nickname: String
+    public let phoeneticName: String
+    public let avatar: String
+    public let id: String // Network based ID
     
-    var avatarImage: UIImage {
+    public var avatarImage: UIImage {
         guard id != "" else {
             return UIImage(named: "default")!
         }
@@ -23,12 +23,12 @@ struct Champion: Equatable {
         return ImageStore.shared.avatar(for: self)
     }
     
-    var lastName: String? {
+    public var lastName: String? {
         return name.components(separatedBy: " ").last
     }
     
     // TODO: This can probably go away when we remove 'ChampionsTome'
-    init(name: String, avatar: String, phoeneticName: String = "") {
+    public init(name: String, avatar: String, phoeneticName: String = "") {
         self.name = name
         self.nickname = "NICK"
         self.avatar = avatar
@@ -36,7 +36,7 @@ struct Champion: Equatable {
         self.id = ""
     }
     
-    init?(jsonData: [String: Any]) {
+    public init?(jsonData: [String: Any]) {
         guard let name = jsonData["fullName"] as? String,
             let nickname = jsonData["nickname"] as? String,
             let phoneticName = jsonData["phoneticNickname"] as? String,
@@ -61,7 +61,7 @@ struct Champion: Equatable {
         self.id = id
     }
     
-    func dictionaryRep() -> [String: Any] {
+    public func dictionaryRep() -> [String: Any] {
         return [
             "fullName": name,
             "nickname": nickname,
@@ -72,6 +72,6 @@ struct Champion: Equatable {
     }
 }
 
-func ==(lhs: Champion, rhs: Champion) -> Bool {
+public func ==(lhs: Champion, rhs: Champion) -> Bool {
     return lhs.id == rhs.id
 }

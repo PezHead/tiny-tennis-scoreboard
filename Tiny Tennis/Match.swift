@@ -6,6 +6,8 @@
 //  Copyright © 2016 David Bireta. All rights reserved.
 //
 
+import TableTennisAPI
+
 enum Team {
     case red
     case blue

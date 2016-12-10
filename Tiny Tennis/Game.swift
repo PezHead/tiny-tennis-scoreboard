@@ -6,6 +6,8 @@
 //  Copyright © 2016 David Bireta. All rights reserved.
 //
 
+import TableTennisAPI
+
 struct Game {
     
     // MARK:- Properties

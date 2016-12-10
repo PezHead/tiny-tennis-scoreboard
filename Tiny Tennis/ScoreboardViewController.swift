@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TableTennisAPI
 
 class ScoreboardViewController: UIViewController {
     // MARK:- Properties

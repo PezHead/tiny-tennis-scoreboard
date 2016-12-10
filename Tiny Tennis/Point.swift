@@ -6,6 +6,8 @@
 //  Copyright © 2016 David Bireta. All rights reserved.
 //
 
+import TableTennisAPI
+
 struct Point {
     let server: Champion
     let receiver: Champion
