@@ -6,4 +6,6 @@
 //  Copyright © 2016 David Bireta. All rights reserved.
 //
 
-import Foundation
+struct Config {
+    static let apiKey = "<API_KEY>"
+}
