@@ -22,7 +22,6 @@
 		8D4AA20A1DB2984600FE9F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2091DB2984600FE9F68 /* ViewController.swift */; };
 		8D4AA2121DB2984600FE9F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AA2101DB2984600FE9F68 /* LaunchScreen.storyboard */; };
 		8D4AA21C1DB29AD200FE9F68 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */; };
-		8D4AA2201DB29B0000FE9F68 /* ChampionsTome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */; };
 		8D4AA2221DB29B2500FE9F68 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2211DB29B2500FE9F68 /* Config.swift */; };
 		8D4AA2241DB29B4800FE9F68 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2231DB29B4800FE9F68 /* Game.swift */; };
 		8D4AA2261DB29B6200FE9F68 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AA2251DB29B6200FE9F68 /* Input.swift */; };
@@ -69,7 +68,6 @@
 		8D4AA2111DB2984600FE9F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D4AA2131DB2984600FE9F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D4AA21B1DB29AD200FE9F68 /* ChampionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
-		8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionsTome.swift; sourceTree = "<group>"; };
 		8D4AA2211DB29B2500FE9F68 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8D4AA2231DB29B4800FE9F68 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8D4AA2251DB29B6200FE9F68 /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		8D1CB9F31DB2A3440074603D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8D4AA21F1DB29B0000FE9F68 /* ChampionsTome.swift */,
 				8D1CB9FC1DB923D40074603D /* ChampionStore.swift */,
 				8D1CB9FA1DB90F280074603D /* Champions.json */,
 				8D4AA2211DB29B2500FE9F68 /* Config.swift */,
@@ -301,7 +298,6 @@
 			files = (
 				8D4AA2301DB29BDE00FE9F68 /* ScoreboardViewController.swift in Sources */,
 				8D4AA21C1DB29AD200FE9F68 /* ChampionCell.swift in Sources */,
-				8D4AA2201DB29B0000FE9F68 /* ChampionsTome.swift in Sources */,
 				8D1CBA011DC197800074603D /* FruitButtons.swift in Sources */,
 				8D4AA23D1DB29DA100FE9F68 /* Announcer.swift in Sources */,
 				8D4AA20A1DB2984600FE9F68 /* ViewController.swift in Sources */,

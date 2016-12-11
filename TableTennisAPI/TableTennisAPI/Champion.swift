@@ -27,15 +27,6 @@ public struct Champion: Equatable {
         return name.components(separatedBy: " ").last
     }
     
-    // TODO: This can probably go away when we remove 'ChampionsTome'
-    public init(name: String, avatar: String, phoeneticName: String = "") {
-        self.name = name
-        self.nickname = "NICK"
-        self.avatar = avatar
-        self.phoeneticName = phoeneticName
-        self.id = ""
-    }
-    
     public init?(jsonData: [String: Any]) {
         guard let name = jsonData["fullName"] as? String,
             let nickname = jsonData["nickname"] as? String,
