@@ -330,26 +330,25 @@ private extension Match {
                 print("WARNING: API data summary is not a valid JSON object")
             }
             
-            if FileManager.default.fileExists(atPath: path.path) {
-                if let fileHandle = FileHandle(forWritingAtPath: path.path) {
-                    fileHandle.seekToEndOfFile()
-                    fileHandle.write(summaryData)
+            if !FileManager.default.fileExists(atPath: path.path) {
+                FileManager.default.createFile(atPath: path.path, contents: nil, attributes: nil)
+            }
+            
+            if let fileHandle = FileHandle(forWritingAtPath: path.path) {
+                fileHandle.seekToEndOfFile()
+                fileHandle.write(summaryData)
+                
+                if let apiData = apiData {
+                    fileHandle.write(apiData)
                     
-                    if let apiData = apiData {
-                        fileHandle.write(apiData)
-                        
-                        if type == .singles {
-                            API.shared.createSinglesMatch(with: apiData)
-                        }
-                    } else {
-                        print("WARNING: Failed writing API data to the log :[")
+                    if type == .singles {
+                        API.shared.createSinglesMatch(with: apiData)
                     }
-                    
-                    fileHandle.closeFile()
+                } else {
+                    print("WARNING: Failed writing API data to the log :[")
                 }
-            } else {
-                // TODO: Make sure to send game summary to the API for the very first recorded game as well!
-                try! summaryData.write(to: path, options: .atomic)
+                
+                fileHandle.closeFile()
             }
             
             // Then send it to slack
