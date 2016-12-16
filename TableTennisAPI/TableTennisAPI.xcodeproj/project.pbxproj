@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D22DE5E1E00B18E00EEBCB4 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22DE5D1E00B18E00EEBCB4 /* Match.swift */; };
+		8D22DE621E03A2B400EEBCB4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22DE611E03A2B400EEBCB4 /* Game.swift */; };
 		8D308A441DF8D37400292883 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D308A431DF8D37400292883 /* Config.swift */; };
 		8DAA68F21DF8CD3500370DB9 /* TableTennisAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DAA68F01DF8CD3500370DB9 /* TableTennisAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DAA68F91DF8CD5800370DB9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA68F81DF8CD5800370DB9 /* API.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D22DE5D1E00B18E00EEBCB4 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		8D22DE611E03A2B400EEBCB4 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8D308A431DF8D37400292883 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8DAA68ED1DF8CD3500370DB9 /* TableTennisAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TableTennisAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAA68F01DF8CD3500370DB9 /* TableTennisAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableTennisAPI.h; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				8DAA68F81DF8CD5800370DB9 /* API.swift */,
 				8DAA68FC1DF8CD8A00370DB9 /* Champion.swift */,
+				8D22DE5D1E00B18E00EEBCB4 /* Match.swift */,
+				8D22DE611E03A2B400EEBCB4 /* Game.swift */,
 				8DAA68FE1DF8CDA400370DB9 /* ImageStore.swift */,
 				8DAA68F01DF8CD3500370DB9 /* TableTennisAPI.h */,
 				8DAA68F11DF8CD3500370DB9 /* Info.plist */,
@@ -145,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DAA68F91DF8CD5800370DB9 /* API.swift in Sources */,
+				8D22DE621E03A2B400EEBCB4 /* Game.swift in Sources */,
 				8D308A441DF8D37400292883 /* Config.swift in Sources */,
 				8DAA68FD1DF8CD8A00370DB9 /* Champion.swift in Sources */,
+				8D22DE5E1E00B18E00EEBCB4 /* Match.swift in Sources */,
 				8DAA68FF1DF8CDA400370DB9 /* ImageStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

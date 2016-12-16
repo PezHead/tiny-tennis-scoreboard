@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TableTennisAPI/TableTennisAPI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "container:Tiny Tennis.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:TableTennisAPI/TableTennisAPI.xcodeproj">
+      location = "group:MatchViewer/MatchViewer.xcodeproj">
    </FileRef>
 </Workspace>

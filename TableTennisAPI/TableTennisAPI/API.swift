@@ -97,4 +97,38 @@ public class API {
         
         task.resume()
     }
+    
+    public func getMatches(_ completion: @escaping ([Match]) -> Void) {
+        let url = baseURL.appendingPathComponent("singles")
+        let request = URLRequest(url: url)
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            guard error == nil else {
+                print(error as Any)
+                return
+            }
+            
+            if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) {
+                if let jsonData = json as? [Any] {
+                    
+                    var matches = [Match]()
+                    
+                    for matchData in jsonData {
+                        if let match = Match(jsonData: matchData as! [String:Any]) {
+                            matches.append(match)
+                        }
+                    }
+                    
+                    completion(matches)
+                }
+                
+//                for case let playerObj as [String: Any] in peeps {
+//                    if let champ = Champion(jsonData: playerObj) {
+//                        championList.append(champ)
+//                    }
+//                }
+            }
+        }
+        task.resume()
+    }
 }
